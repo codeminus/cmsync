@@ -59,3 +59,23 @@ To run a command line after copying files, set `run_after`. Example:
 
 ## Running CMSync
 
+### On linux
+
+run `cmsync` on the folder containing the *sync.json* file:
+```
+$ ls
+sync.json
+$ cmsync
+
+Source:      'c:/dir/to/copy'
+Destination: 'C:/Windows/Temp'
+Copying file... Done.
+Running `echo 'Done! :D'`
+'Done! :D'
+```
+### On Windows
+If you have any *gcc* runtime environment like [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)
+you can run like you would on linux, otherwise, 
+run `python -m cmsync` on the folder container the *sync.json* file.
+
+
