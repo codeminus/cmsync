@@ -1,24 +1,20 @@
 #! /usr/bin/python3
 import os
 import stat
-import paramiko
 import shutil
 
-from color import Color
+from .color import Color
 
 
 class Transport:
     """
     """
 
-    def __init__(self, src, dest, sftp_config=None):
+    def __init__(self, src, dest):
         self.src = src
         self.dest = dest
-        self.sftp_config = sftp_config
 
         self.valid = None
-        self.ssh_conn = None
-        self.sftp_conn = None
 
     def is_valid(self):
         """
@@ -28,28 +24,6 @@ class Transport:
                 Color.ERROR + "Error: Path not found: '{}'.".format(self.src)
             )
             return False
-
-        if self.sftp_config:
-            conf = self.sftp_config
-            paramiko.util.log_to_file('transport.log')
-
-            try:
-                ssh = paramiko.Transport((conf['host'], conf['port']))
-            except Exception:
-                print(
-                    Color.ERROR +
-                    "Error: Unable to connect to {}:{}. Connection timed out."
-                    .format(conf['host'], conf['port'])
-                )
-                return False
-
-            try:
-                ssh.connect(username=conf['user'], password=conf['pass'])
-            except Exception:
-                print(Color.ERROR + "Error: Authentication failed.")
-                return False
-
-            self.ssh_conn = ssh
 
         return True
 

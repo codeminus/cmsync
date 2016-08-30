@@ -3,11 +3,11 @@
 import json
 import os
 
-from color import Color
-from transport import Transport
+from .color import Color
+from .transport import Transport
 
 
-class Sync:
+class CMSync:
     """Sync directories and files based on the specifications of the json file
     """
 
