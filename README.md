@@ -1,4 +1,8 @@
 # cmsync
+A simple python package that syncs files and directories.
+
+### Pending features:
+- SFTP sync
 
 ## Installation
 Install using pip:
