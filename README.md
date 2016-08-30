@@ -8,7 +8,7 @@ pip install cmsync
 
 Usage:
 
-Create a sync.json file with the following minimal structure:
+Create a **sync.json** file with the following minimal structure:
 
 ```
 { 
@@ -24,7 +24,7 @@ Create a sync.json file with the following minimal structure:
 
 
 The following example copies the contents of `/dir/to/copy` to `/tmp/abc`
-and tranfers `/dir/file.txt` to `/tmp/xyz/newfile.txt`:
+and `/dir/file.txt` to `/tmp/xyz/newfile.txt`:
 
 ```
 { 
@@ -41,7 +41,7 @@ and tranfers `/dir/file.txt` to `/tmp/xyz/newfile.txt`:
 }
 ```
 
-## Run command after copying files
+## Running a command after copying files
 
 To run a command line after copying files, set `run_after`. Example:
 
@@ -76,6 +76,6 @@ Running `echo 'Done! :D'`
 ### On Windows
 If you have any *gcc* runtime environment like [MinGW-w64](https://sourceforge.net/projects/mingw-w64/)
 you can run like you would on linux, otherwise, 
-run `python -m cmsync` on the folder container the *sync.json* file.
+run `python -m cmsync` on the folder containing the *sync.json* file.
 
 
