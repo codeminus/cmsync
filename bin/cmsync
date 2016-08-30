@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 
 import cmsync
-cmsync.CMSync('sync.json').start()
+cmsync.CMSync('sync.json')

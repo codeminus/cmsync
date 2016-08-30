@@ -42,10 +42,8 @@ class Transport:
             if not self.is_valid():
                 return False
 
-        if self.sftp_config:
-            self.send_sftp()
-        else:
-            self.send_local()
+        self.send_local()
+            
 
     def send_local(self):
 

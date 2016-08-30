@@ -13,6 +13,7 @@ class CMSync:
 
     def __init__(self, config_file):
         self._load_config(config_file)
+        self._now()
 
     def _load_config(self, config_file):
         """Loads the configuration file"""
@@ -23,14 +24,13 @@ class CMSync:
 
         self._config = json.load(open(config_file))
 
-    def start(self):
+    def _now(self):
         """Starts synchronization"""
         for entry in self._config['manifest']:
 
             t = Transport(
                 entry['src'],
-                entry['dest'],
-                sftp_config
+                entry['dest']
             )
             t.send()
 
@@ -39,5 +39,4 @@ class CMSync:
                 os.system(entry['run_after'])
 
 if __name__ == '__main__':
-    s = Sync('sync.json')
-    s.start()
+    s = CMSync('sync.json')

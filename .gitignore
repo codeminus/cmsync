@@ -2,3 +2,5 @@
 /dist/
 /*egg-info
 /*.egg
+.pypirc
+sync.json
