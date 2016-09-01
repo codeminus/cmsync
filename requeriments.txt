@@ -1,0 +1,15 @@
+cffi==1.7.0
+-e git+https://github.com/codeminus/cmsync.git@a5d2d39cb5eb077fd53bce372a50e16085ed4b1e#egg=cmsync
+colorama==0.3.7
+cryptography==1.4
+cue-sdk==2.0
+Django==1.9.1
+future==0.15.2
+idna==2.1
+paramiko==2.0.1
+pefile==2016.3.28
+pyasn1==0.1.9
+pycparser==2.14
+PyInstaller==3.2
+pypiwin32==219
+six==1.10.0

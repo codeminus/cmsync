@@ -11,7 +11,7 @@ class CMSync:
     """Sync directories and files based on the specifications of the json file
     """
 
-    def __init__(self, config_file):
+    def __init__(self, config_file='sync.json'):
         self._load_config(config_file)
         self._now()
 
@@ -38,5 +38,8 @@ class CMSync:
                 print(Color.COMMAND + "Running `{}`".format(entry['run_after']))
                 os.system(entry['run_after'])
 
+def main():
+    CMSync()
+
 if __name__ == '__main__':
-    s = CMSync('sync.json')
+    s = CMSync()
