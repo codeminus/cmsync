@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='cmsync',
-    version='0.8.1',
+    version='0.8.2',
     author='Wilson Santos',
     author_email='wilson@codeminus.org',
     description='A simple module to sync local folders that can run commands after the transfer.',
