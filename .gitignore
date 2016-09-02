@@ -5,3 +5,4 @@
 .pypirc
 sync.json
 **/__pycache__/
+.idea/
