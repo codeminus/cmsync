@@ -1,8 +1,8 @@
 *.pyc
+**/__pycache__/
 /dist/
-/*egg-info
+/*egg-info/
 /*.egg
 .pypirc
 sync.json
-**/__pycache__/
 .idea/
